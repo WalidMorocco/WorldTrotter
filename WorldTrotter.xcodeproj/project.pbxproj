@@ -16,6 +16,7 @@
 		CE89639827BDC03E0002B8BB /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE89639727BDC03E0002B8BB /* WorldTrotterTests.swift */; };
 		CE8963A227BDC03E0002B8BB /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8963A127BDC03E0002B8BB /* WorldTrotterUITests.swift */; };
 		CE8963A427BDC03E0002B8BB /* WorldTrotterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8963A327BDC03E0002B8BB /* WorldTrotterUITestsLaunchTests.swift */; };
+		CE8D050827D0401100E25E37 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE8D050A27D0401100E25E37 /* Localizable.strings */; };
 		CEDE3B1327C710AD00ABC03D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDE3B1227C710AD00ABC03D /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,9 @@
 		CE89639D27BDC03E0002B8BB /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8963A127BDC03E0002B8BB /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		CE8963A327BDC03E0002B8BB /* WorldTrotterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE8D050427D03A1400E25E37 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CE8D050527D03A6000E25E37 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		CE8D050927D0401100E25E37 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEDE3B1227C710AD00ABC03D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,7 @@
 		CE89637427BDC03C0002B8BB = {
 			isa = PBXGroup;
 			children = (
+				CE8D050A27D0401100E25E37 /* Localizable.strings */,
 				CE89637F27BDC03C0002B8BB /* WorldTrotter */,
 				CE89639627BDC03E0002B8BB /* WorldTrotterTests */,
 				CE8963A027BDC03E0002B8BB /* WorldTrotterUITests */,
@@ -216,6 +221,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = CE89637427BDC03C0002B8BB;
 			productRefGroup = CE89637E27BDC03C0002B8BB /* Products */;
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE89638D27BDC03D0002B8BB /* LaunchScreen.storyboard in Resources */,
+				CE8D050827D0401100E25E37 /* Localizable.strings in Resources */,
 				CE89638A27BDC03D0002B8BB /* Assets.xcassets in Resources */,
 				CE89638827BDC03C0002B8BB /* Main.storyboard in Resources */,
 			);
@@ -305,6 +312,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE89638727BDC03C0002B8BB /* Base */,
+				CE8D050427D03A1400E25E37 /* en */,
+				CE8D050527D03A6000E25E37 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -317,6 +326,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		CE8D050A27D0401100E25E37 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE8D050927D0401100E25E37 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -324,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -385,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

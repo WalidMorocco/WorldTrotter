@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ConversionViewController: UIViewController, UITextViewDelegate {
+class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
@@ -34,8 +34,8 @@ class ConversionViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField){
-        if let text = textField.text, let value = Double(text) {
-            fahrenheitValue = Measurement(value: value, unit: .fahrenheit)
+        if let text = textField.text, let number = numberFormatter.number(from: text) {
+            fahrenheitValue = Measurement(value: number.doubleValue, unit: .fahrenheit)
         } else{
             fahrenheitValue = nil
         }
@@ -62,10 +62,21 @@ class ConversionViewController: UIViewController, UITextViewDelegate {
     }()
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("Current text: \(String(describing: textField.text))")
-        print("Remplacement text: \(string)")
+        let currentLocale = Locale.current
+        let decimalSeparator = currentLocale.decimalSeparator ?? "."
+        let existingTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator)
+        let remplacementTextHasDecimalSeparator = string.range(of: decimalSeparator)
         
-        return true
+        if existingTextHasDecimalSeparator != nil, remplacementTextHasDecimalSeparator != nil{
+            return false
+        } else {
+            return true
+        }
     }
+    
+    
+    //let isMetric = currentLocale.usesMetricSystem
+    //let currencySymbol = currentLocale.currencySymbol
+    
 }
 

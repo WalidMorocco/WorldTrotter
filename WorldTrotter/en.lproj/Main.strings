@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "100"; ObjectID = "BXV-QU-jsh"; */
+"BXV-QU-jsh.text" = "100";
+
+/* Class = "UITextField"; placeholder = "value"; ObjectID = "ETb-p7-R3Z"; */
+"ETb-p7-R3Z.placeholder" = "value";
+
+/* Class = "UILabel"; text = "DEGREES FAHRENHEIT"; ObjectID = "GDt-6F-P2q"; */
+"GDt-6F-P2q.text" = "DEGREES FAHRENHEIT";
+
+/* Class = "UILabel"; text = "DEGREES CELSIUS"; ObjectID = "QML-vG-xwz"; */
+"QML-vG-xwz.text" = "DEGREES CELSIUS";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "jnl-dk-nk5"; */
+"jnl-dk-nk5.title" = "Map";
+
+/* Class = "UITabBarItem"; title = "Convert"; ObjectID = "rQX-7v-JK1"; */
+"rQX-7v-JK1.title" = "Convert";
+
+/* Class = "UILabel"; text = "is really"; ObjectID = "u5p-Gi-vny"; */
+"u5p-Gi-vny.text" = "is really";
