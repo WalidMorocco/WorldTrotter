@@ -9,6 +9,7 @@ import UIKit
 
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
+    var gradientLayer: CAGradientLayer = CAGradientLayer()
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
@@ -29,6 +30,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("ConversionViewController loaded its view.")
+        
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor, UIColor.blue.cgColor]
+        gradientLayer.frame.size = view.frame.size
+        view.layer.insertSublayer(gradientLayer, at:0)
         
         updateCelsiusLabel()
     }
@@ -63,6 +68,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentLocale = Locale.current
+        
+        let numbersOnly = CharacterSet(charactersIn: "0123456789.")
+        let NoStringEntered = CharacterSet(charactersIn: string)
+        if !NoStringEntered.isSubset(of: numbersOnly) {
+            return false
+          }
+        
         let decimalSeparator = currentLocale.decimalSeparator ?? "."
         let existingTextHasDecimalSeparator = textField.text?.range(of: decimalSeparator)
         let remplacementTextHasDecimalSeparator = string.range(of: decimalSeparator)

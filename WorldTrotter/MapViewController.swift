@@ -10,6 +10,7 @@ import MapKit
 
 class MapViewController: UIViewController {
     
+    
     var mapView: MKMapView!
     
     override func loadView() {
@@ -44,6 +45,8 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("MapViewController loaded its view.")
+        
+        
     }
     
     @objc func mapTypeChanged(_ segControl: UISegmentedControl){
