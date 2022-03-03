@@ -9,7 +9,6 @@ import UIKit
 
 class ConversionViewController: UIViewController, UITextFieldDelegate {
     
-    var gradientLayer: CAGradientLayer = CAGradientLayer()
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
@@ -31,9 +30,6 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         print("ConversionViewController loaded its view.")
         
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor, UIColor.blue.cgColor]
-        gradientLayer.frame.size = view.frame.size
-        view.layer.insertSublayer(gradientLayer, at:0)
         
         updateCelsiusLabel()
     }
